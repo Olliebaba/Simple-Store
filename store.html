@@ -1,0 +1,78 @@
+<div class="store">
+  <div class="store-header">
+    <h1>Gift Card Store</h1>
+  </div>
+  <form action="" id="store-form" method="post" name="store">
+    <a class="controlClosed viewMyCart closer" role="button" data-trigger="#cartContainer">View Cart</a>
+    <div class="product-row">
+      <div class="store-product">
+        <h2>Nemo Store &#36;25 Gift Card</h2>
+        <div class="quantityBox">
+          <div class="giftcard25" data-gift-box="giftcard25" contenteditable="true" data-maxlength="4">0</div>
+          <a class="buy" data-gc="giftcard25">Add to Cart</a>
+          <a class="cart">View Cart</a>
+        </div>
+      </div>
+      <div class="store-product">
+        <h2>Nemo Store &#36;50 Gift Card</h2>
+        <div class="quantityBox">
+          <div class="giftcard50" data-gift-box="giftcard50" contenteditable="true" data-maxlength="4">0</div>
+          <a class="buy" data-gc="giftcard50">Add to Cart</a>
+          <a class="cart">View Cart</a>
+        </div>
+      </div>
+      <div class="store-product">
+        <h2>Nemo Store &#36;100 Gift Card</h2>
+        <div class="quantityBox">
+          <div class="giftcard100" data-gift-box="giftcard100" contenteditable="true" data-maxlength="4">0</div>
+          <a class="buy" data-gc="giftcard100">Add to Cart</a>
+          <a class="cart">View Cart</a>
+        </div>
+      </div>
+    </div>
+    <div id="cartContainer" class="close" role="tabpanel">
+      <div class="accordion-contents">
+        <div class="cartContents">
+           <div>
+          <h2>Cart</h2>
+          <ul>
+            <li>
+              <div>
+                <label>&#36;25 Gift Card</label>
+                <input name="giftcard25" value="" readonly>
+                <a data-remove="giftcard25"><span class="sr-only">Remove cart contents</span></a>   
+              </div>          
+            </li>
+            <li>
+              <div>
+                <label>&#36;50 Gift Card</label>
+                <input name="giftcard50" value="" readonly>
+                <a data-remove="giftcard50"><span class="sr-only">Remove cart contents</span></a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <label>&#36;100 Gift Card</label>
+                <input name="giftcard100" value="" readonly>
+                <a data-remove="giftcard100"><span class="sr-only">Remove cart contents</span></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div id="customerInfo">
+          <div>
+            <h3>Your info:</h3>
+            <input name="first-name" placeholder="First Name" value="">
+            <input name="last-name" placeholder="Last Name" value="">
+            <input name="email" placeholder="Email" value="">
+            <button>Submit</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </form>
+  <div class="result-message">
+    <h3>Thank you for your order. We will be in contact with you shortly.</h3>
+  </div>
+</div>
