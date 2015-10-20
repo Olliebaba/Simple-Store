@@ -281,17 +281,10 @@ button {
   margin-right: -$gutter-buffer;
   max-height: 0px;
   transition: max-height .1s ease-in-out;
+  transition-delay:.1s;
   overflow: hidden;
   visibility: hidden;
 
-  /*@media (min-width: $screen-sm-min) {
-    padding-top: $gutter-buffer;
-    padding-bottom: round($gutter-buffer * 2.5);
-    max-height: none;
-    opacity: 0;
-    transition: opacity .2s ease-in-out;
-  }*/
-  
   .cart {
     display: none;
     
@@ -303,14 +296,14 @@ button {
   .selected & {
     max-height: 60px;
     transition: max-height .1s ease-in-out;
-    transition-delay: .2s;
+    transition-delay: .3s;
     visibility: visible;
     
     @media (min-width: $screen-sm-min) {
-      max-height: none;
-      opacity: 1;
-      transition: opacity .1s ease-in-out;
-      transition-delay: .2s;
+      
+      //opacity: 1;
+      transition: all .1s ease-in-out;
+      transition-delay: 0s;
     }
   }
 
@@ -328,20 +321,9 @@ button {
     max-height: 0px;
     font-size: 1rem;
 
-    /*@media (min-width: $screen-sm-min) {
-      max-height: none;
-      position: absolute;
-      font-size: .8rem;
-    }*/
-    
-    
     .valError & {
-      max-height: 20px;
+      max-height: 25px;
       opacity: 1;
-      
-      /*@media (min-width: $screen-sm-min) {
-        max-height: none;
-      }*/
     }
   }
 }
@@ -371,9 +353,7 @@ button {
   }
   
 }
-.accordion-contents {
-  transition: margin-top .1s ease-in-out; 
-}
+
 
 .cartContents {
   >div {

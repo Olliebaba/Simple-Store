@@ -1,4 +1,3 @@
-
 // places cursor at end of input/contenteditable element
 function placeCaretAtEnd(el) {
   el.focus();
@@ -70,17 +69,17 @@ $('.buy').on('click', function() {
       // if we're in mobile view, adjust cart height this way
       if (mobileView()) {
         // - 15 on line below accomodates for issue with absolutely positioned pseudo elemtent on cart heading
-        var hasContentsDifference;
+        var hasContentsDifference = 0;
         if (!$('#cartContainer').hasClass('hasContents')) hasContentsDifference = 15;
         
         var newMobileHeight = cartContainerHeight + inputRowHeight - hasContentsDifference;
-        $('#cartContainer').attr('data-height' , (newMobileHeight + "px")).height(newMobileHeight);
+        $('#cartContainer').attr('data-height' , newMobileHeight).height(newMobileHeight);
       // otherwise handle it this way  
       } else {
         console.log('not mobile view');
         var cartContentsHeight = inputRowHeight + $('.cartContents > div').height();
         if (cartContentsHeight > cartContainerHeight) {
-          $('#cartContainer').attr('data-height' , (cartContentsHeight + "px")).height(cartContentsHeight);
+          $('#cartContainer').attr('data-height' , cartContentsHeight).height(cartContentsHeight);
         }
       }
       $('input[name="' + myGC + '"]').parents('li').addClass('hasValue');
@@ -113,11 +112,11 @@ $('[data-remove]').on('click', function() {
     // the + 15 on the code below
     // fixes issue with absolutely positioned pseudo element
     // - 15 on line below accomodates for issue with absolutely positioned pseudo elemtent on cart heading
-    var hasContentsDifference;
+    var hasContentsDifference = 0;
     if ($('.hasValue').length == 1) hasContentsDifference = 15;
         
      var newMobileHeight = cartContainerHeight - inputRowHeight + hasContentsDifference;
-     $('#cartContainer').attr('data-height' , (newMobileHeight + "px")).height(newMobileHeight);
+     $('#cartContainer').attr('data-height' , newMobileHeight).height(newMobileHeight);
   // otherwise adjust height this way
   } else {
     var customerInfoHeight = $('#customerInfo > div').height();
@@ -125,7 +124,7 @@ $('[data-remove]').on('click', function() {
     // shink the container's data-height/height if removing the <li>
     // make it appropriate
     if (cartContentsHeight > customerInfoHeight) {
-      $('#cartContainer').attr('data-height' , (customerInfoHeight + "px")).height(customerInfoHeight);
+      $('#cartContainer').attr('data-height' , customerInfoHeight).height(customerInfoHeight);
     } 
   }
   $(this).parents('li').removeClass('hasValue');
@@ -156,4 +155,3 @@ var mobileView = function (){
   (!$('[data-trigger="#cartContainer"]').is(':visible')) ? result = true : result = false ;
   return result;
 };
-
